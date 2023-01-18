@@ -78,7 +78,7 @@ function NavBar(props) {
               <ListItemText primary={item} />
             </ListItemButton> */}
             <CustomListItemText sx={{ textAlign: "center" }}>
-              {item === "home" ? (
+              {item === "Home" ? (
                 <a
                   key={item}
                   sx={{ color: "#fff" }}
