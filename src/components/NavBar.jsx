@@ -14,14 +14,18 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import MenuItem from "@mui/material/MenuItem";
+
+import { Link as RouterLink, NavLink } from "react-router-dom";
+import Link from "@mui/material/Link";
 
 import { styled } from "@mui/material/styles";
 import { blueGrey } from "@mui/material/colors";
 
-import marufLogo from '../images/maruf_logo.png';
+import marufLogo from "../images/maruf_logo.png";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Calender", "Contact"];
+const navItems = ["Home", "About", "Calendar", "Contact"];
 
 function NavBar(props) {
   const { window } = props;
@@ -31,6 +35,24 @@ function NavBar(props) {
     backgroundColor: "white",
     color: "black",
     button: {
+      color: "black",
+      "&:hover": {
+        backgroundColor: "light gray",
+        color: "#E4B45A",
+      },
+    },
+    a: {
+      color: "black",
+      "&:hover": {
+        backgroundColor: "light gray",
+        color: "#E4B45A",
+      },
+    },
+  }));
+
+  const CustomListItemText = styled(ListItemText)(({ theme }) => ({
+    // color: "black",
+    a: {
       color: "black",
       "&:hover": {
         backgroundColor: "light gray",
@@ -52,9 +74,30 @@ function NavBar(props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
+            {/* <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary={item} />
-            </ListItemButton>
+            </ListItemButton> */}
+            <CustomListItemText sx={{ textAlign: "center" }}>
+              {item === "home" ? (
+                <a
+                  key={item}
+                  sx={{ color: "#fff" }}
+                  href={`/`}
+                  style={{ textDecoration: "none" }}
+                >
+                  {item}
+                </a>
+              ) : (
+                <a
+                  key={item}
+                  sx={{ color: "#fff" }}
+                  href={`/${item}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  {item}
+                </a>
+              )}
+            </CustomListItemText>
           </ListItem>
         ))}
       </List>
@@ -65,7 +108,7 @@ function NavBar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex" }} className="mainNavBar">
       <CssBaseline />
       <ColorAppBar component="nav">
         <Toolbar>
@@ -83,8 +126,8 @@ function NavBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-          Maruf
-          {/* <img
+            Maruf
+            {/* <img
             src={marufLogo}
             alt="maruf logo"
             style={{
@@ -98,11 +141,45 @@ function NavBar(props) {
           /> */}
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
+            {/* {navItems.map((item) => (
               <Button key={item} sx={{ color: "#fff" }}>
                 {item}
               </Button>
-            ))}
+            ))} */}
+            {/* {navItems.map((page) => (
+              <MenuItem key={page}>
+                <RouterLink
+                  // key={page}
+                  // component={RouterLink}
+                  to={`/${page}`}
+                  underline="none"
+                  color="black"
+                >
+                  {page}
+                </RouterLink>
+              </MenuItem>
+            ))} */}
+            {navItems.map((item) =>
+              item === "Home" ? (
+                <a
+                  key={item}
+                  sx={{ color: "#fff" }}
+                  href={`/`}
+                  style={{ textDecoration: "none", marginRight: "2rem" }}
+                >
+                  {item}
+                </a>
+              ) : (
+                <a
+                  key={item}
+                  sx={{ color: "#fff" }}
+                  href={`/${item}`}
+                  style={{ textDecoration: "none", marginRight: "2rem" }}
+                >
+                  {item}
+                </a>
+              )
+            )}
           </Box>
         </Toolbar>
       </ColorAppBar>

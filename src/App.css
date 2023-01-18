@@ -1,3 +1,50 @@
+.mainNavBar {
+  margin-bottom: 3rem;
+}
+
+.text-on-image {
+  position: absolute;
+  /* right: 10%; */
+  left: 5%;
+  /* bottom: 15%; */
+}
+
+#landing-page {
+  background-image: url("./images/main-bg.JPG");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  min-width: 1024px;
+  /* position: fixed; */
+  /* z-index: -1; */
+  top: 0;
+  color: white;
+  left: 0;
+  /* opacity: .6; */
+}
+
+@media (max-width: 767px) {
+  #landing-page {
+    /* background-size:contain; */
+    background-image: none;
+    position: relative;
+    /* width: 100%; */
+    /* height: auto; */
+    width: auto;
+  }
+}
+
+/* .container-css {
+    position: relative;
+}
+
+.text-content {
+    position: relative;
+    z-index: 1;
+} */
+
+
 /* #root {
   max-width: 1280px;
   margin: 0 auto;
