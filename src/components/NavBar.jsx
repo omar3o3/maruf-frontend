@@ -126,19 +126,19 @@ function NavBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            Maruf
-            {/* <img
+            {/* Maruf */}
+            <img
             src={marufLogo}
             alt="maruf logo"
             style={{
             //   width: "8%",
             // height: "10%"
-            //   maxWidth: "10%",
+              maxWidth: "12%",
               // marginTop: ".5%",
               // position: "relative",
             }}
             // sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          /> */}
+          />
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {/* {navItems.map((item) => (

@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 
 function About() {
   return (
-    <div>
+    <div id="about-page">
       <div>
         <Typography variant="h2" align="center" style={{ marginTop: "7%" }}>
           About Us
@@ -32,7 +32,13 @@ function About() {
         </Typography>
         <Typography
           align="center"
-          style={{ paddingLeft: "3%", paddingRight: "3%", marginTop: "3%", marginBottom: '10%' }}
+          style={{
+            paddingLeft: "3%",
+            paddingRight: "3%",
+            marginTop: "3%",
+            // marginBottom: "10%",
+            paddingBottom: "10%",
+          }}
         >
           A space where young professionals can learn to spiritually grow and
           establish genuine companionship within a socially accepting

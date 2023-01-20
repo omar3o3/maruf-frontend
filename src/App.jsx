@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import LandingPage from "./components/LandingPage";
 import About from "./components/About";
 import MarufCalendar from "./components/MarufCalendar";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/About" element={<About />} />
           <Route path="/Calendar" element={<MarufCalendar />} />
+          <Route path="/Contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </div>

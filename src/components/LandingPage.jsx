@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 import bgImage from "../images/main-bg.jpg";
+import bgImage2 from "../images/bg-pic.png";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 
 function LandingPage() {
@@ -41,7 +42,7 @@ const theme = createTheme({
         </Typography>
         <Typography
           variant="h6"
-          style={{ marginTop: "5%" }}
+          style={{ marginTop: "5%", fontWeight: "bold" }}
           className="text-content"
         >
           We chose the word "Maruf" to be the name of our community because at
