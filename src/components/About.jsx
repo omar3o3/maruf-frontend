@@ -10,7 +10,12 @@ function About() {
         </Typography>
         <Typography
           align="center"
-          style={{ paddingLeft: "3%", paddingRight: "3%", marginTop: "3%" }}
+          style={{
+            paddingLeft: "3%",
+            paddingRight: "3%",
+            marginTop: "3%",
+            fontWeight: "bold",
+          }}
         >
           The Maruf community is a warm and welcoming space that brings together
           young Muslim professionals in New York city who aspire to grow
@@ -38,6 +43,7 @@ function About() {
             marginTop: "3%",
             // marginBottom: "10%",
             paddingBottom: "10%",
+            fontWeight: "bold",
           }}
         >
           A space where young professionals can learn to spiritually grow and
